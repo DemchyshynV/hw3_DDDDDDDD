@@ -1,0 +1,8 @@
+<form [formGroup]="form">
+  <select formControlName="userId">
+    <option *ngFor="let user of users" [value]="user.id">{{user.name}}</option>
+  </select>
+  <button (click)="get()">Get</button>
+</form>
+
+<router-outlet></router-outlet>
